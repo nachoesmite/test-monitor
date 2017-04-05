@@ -21,6 +21,9 @@ node(env.DESIRED_NODE_NAME) {
     env.PLATFORM = 'node'
     env.SKIP_STAGES = 'checkout,setup,unit-test,ui-test,junit-report,html-report,cobertura-report,slack-notification'
 
+    
+    stage "Basura"
+    sh("exit 1")
     withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: env.GIT_CREDENTIALS_ID, passwordVariable: 'GITHUB_PASS', usernameVariable: 'GITHUB_USER']]) {
         git(credentialsId: env.GIT_CREDENTIALS_ID, url: 'git@github.com:mulesoft/automation-jenkins-pipeline.git', branch: 'post-to-dashboard')
         load('pipeline.groovy').execute(parameters, env.PIPELINE_ENV)
