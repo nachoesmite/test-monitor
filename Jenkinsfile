@@ -23,7 +23,7 @@ environments {
         ENVS = 'qa'
         ENV_AGENT_VERSION = '1.6.0-mule-3.x'
         GIT_BRANCH = 'qa'
-        MONITOR_ENVIRONMENT = 'qa'
+        MONITOR_ENV = 'qa'
         MONITOR_URL = 'https://automation-builds.firebaseio.com'
     }
 
@@ -36,7 +36,7 @@ environments {
         ENVS = 'qa'
         GIT_BRANCH = 'qa'
         ENV_AGENT_VERSION = '1.6.0-mule-3.x'
-        MONITOR_ENVIRONMENT = 'qa'
+        MONITOR_ENV = 'qa'
         MONITOR_URL = 'https://automation-builds.firebaseio.com'
     }
     stg {
