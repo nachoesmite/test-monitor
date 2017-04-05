@@ -3,7 +3,11 @@
 env.DESIRED_NODE_NAME = env.DESIRED_NODE_NAME ?: 'docker'
 env.GIT_CREDENTIALS_ID = env.GIT_CREDENTIALS_ID ?: 'github'
 env.PIPELINE_ENV = env.PIPELINE_ENV ?: 'automation_qax'
-
+env.MONITOR_ENVIRONMENT = 'qa'
+env.MONITOR_URL = 'https://automation-builds.firebaseio.com'
+    
+    
+    
 def parameters = '''
 environments {
     automation_qax {
