@@ -1,5 +1,4 @@
 #!groovy
-#!groovy
 
 final DEFAULT_PIPELINE_ENV = 'pull_request'
 
