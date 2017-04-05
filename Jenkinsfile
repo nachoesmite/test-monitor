@@ -23,7 +23,7 @@ node(env.DESIRED_NODE_NAME) {
 
     
     stage "Basura"
-    sh("exit 1")
+    sh("exit 2")
     withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: env.GIT_CREDENTIALS_ID, passwordVariable: 'GITHUB_PASS', usernameVariable: 'GITHUB_USER']]) {
         git(credentialsId: env.GIT_CREDENTIALS_ID, url: 'git@github.com:mulesoft/automation-jenkins-pipeline.git', branch: 'post-to-dashboard')
         load('pipeline.groovy').execute(parameters, env.PIPELINE_ENV)
